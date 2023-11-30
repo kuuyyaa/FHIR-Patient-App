@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src='dist/fhir-client-v2.js'>
+	</script>
+</head>
+
+<body>
+	<p>Hello, I am the page "launch.html"</p>
+
+	<script>
+		FHIR.oauth2.authorize({
+      'client_id': 'FHIR client at https://github.com/smart-on-fhir/client-js',
+      'scope':  'PATIENT.READ, PATIENT.SEARCH, OBSERVATION.READ, OBSERVATION.SEARCH',
+      'redirect_uri': 'localhost:3000'
+    });
+	</script>
+
+</body>
+
+</html>
